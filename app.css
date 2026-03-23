@@ -1,0 +1,15 @@
+body {
+  border: 2px solid rgb(0, 0, 0);
+  
+}
+
+div {
+  width:300px;
+  margin:auto;
+  background-color:blue;
+}
+
+.mycontainer {
+  width:100%;
+  overflow:auto;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>WELCOME TO THE NUMBER GUESS GAME (1 - 10)</h1>
+
+
+    <input id="guess" value="">
+    <button onclick="guessnumber()">check me </button>
+
+    <p id="result"> </p>
+
+    
+
+
+    <script>
+
+        let gen_num = Math.random()
+        
+        gen_num = Math.floor(gen_num * 10 )+ 1
+
+        console.log(gen_num)
+
+        let guess_number = document.getElementById("guess")
+
+        let result = document.getElementById("result")
+
+        
+
+        function guessnumber(){
+            let score = 0;
+            
+            while (true){
+
+            if(gen_num == Number(guess_number.value) ){
+
+                result.textContent = "you WON"
+
+            }else{
+
+                score = score + 1;
+
+                
+
+
+                result.textContent = "you Lose " + score
+            }}
+
+            
+
+
+        }
+
+
+    </script>
+</body>
+</html>
