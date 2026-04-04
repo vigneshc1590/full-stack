@@ -1,36 +1,32 @@
-let mountain = 'Tokenizatation is the base of LLM';
+const express = require('express');
+
+const http = require('http');
+
+const app = express();
+
+const server = http.createServer(app);
+
+app.use((req,res,next)=>{
+    console.log("express working smoothly");
+
+    next();
+
+    
+})
 
 
-console.log(`${mountain.substring(0,5)} - ${mountain}`);
+app.use((req,res,next)=>{
+    console.log("express working smoothly for second time");
+    next();
 
-for(let i=0; i<mountain.length; i++){
-
-    console.log(mountain[i]);
-}
-
-
+    
+})
 
 
-console.log(mountain.replace("LLMllllllllll", "AI"));
+app.use((req,res,next)=>{
+    console.log("express working smoothly for third time");
+    res.send('<h1>wlecome to my first express js </h1>');
+    next();
+})
 
-console.log(mountain.trim());
-
-console.log('----------------------------------------------');
-//while (true){
-
-
-const details = {
-    name: `vignesh` ,
-    age : 40,
-    marital_status : `Unmarried`
-
-};
-
-console.log(`welcome ${details.age}`);
-
-
-//}
-
-
-
-
+server.listen(3000)
