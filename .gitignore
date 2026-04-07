@@ -1,0 +1,11 @@
+# Dependencies
+node_modules/
+package-lock.json (optional, but keep for production)
+
+# Environment / Secrets
+.env
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
