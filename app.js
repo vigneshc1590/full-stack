@@ -4,7 +4,11 @@ const bodyparser = require('body-parser');
 
 const app = express();
 
-app.use(bodyparser.urlencoded())
+const router = require('./routers/routers')
+
+app.use(bodyparser.urlencoded({extended:false}))
+
+app.use(router)
 
 // app.get('/test', (req, res) => {
 //   res.send('This request for "/test" directory');
